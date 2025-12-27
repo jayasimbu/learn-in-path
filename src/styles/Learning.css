@@ -1,0 +1,70 @@
+/* Learning page styles */
+.learning-container {
+	max-width: 1200px;
+	margin: 2rem auto;
+	padding: 1rem 1.25rem;
+	color: #0f172a;
+}
+
+.learning-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.left-header { display:flex; align-items:center; gap:0.75rem }
+.btn-back {
+	background: transparent;
+	border: 1px solid rgba(15,23,42,0.06);
+	padding: 0.4rem 0.7rem;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: 600;
+}
+.btn-back:hover { background:#f1f5f9 }
+
+.learning-content { display: flex; gap: 1.25rem; align-items: flex-start }
+.video-section { flex: 2 }
+.video-player {
+	width: 100%;
+	background: #000;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.video-player iframe { width: 100%; height: 520px; border: 0; display:block }
+
+.learning-sidebar { flex: 1; min-width: 260px }
+.modules-section, .resources-section, .progress-section { background: #fff; padding: 0.75rem; border-radius: 8px; margin-bottom: 0.75rem; box-shadow: 0 6px 18px rgba(2,6,23,0.04) }
+
+.modules-list { display: flex; flex-direction: column; gap: 0.5rem; max-height: 420px; overflow: auto; padding-right: 6px }
+.module-item { display: flex; gap: 0.75rem; padding: 0.6rem; background: #f8fafc; border-radius: 8px; align-items: center; cursor: pointer }
+.module-item.active { background: linear-gradient(90deg,#eef2ff,#f8fafc); border: 1px solid rgba(59,130,246,0.08) }
+.module-item.completed { opacity: 0.9 }
+.module-icon { width:34px; height:34px; display:flex; align-items:center; justify-content:center; background:#fff; border-radius:6px }
+.module-content h4 { margin:0; font-size:0.95rem }
+.module-content p { margin:0; font-size:0.8rem; color:#475569 }
+.completed-badge { margin-left:auto; color:#10b981; font-weight:700 }
+
+.course-actions { display:flex; gap:0.5rem }
+.btn-outline { background: transparent; border: 1px solid rgba(15,23,42,0.06); padding: 0.45rem 0.65rem; border-radius:8px; cursor:pointer }
+.btn-outline:hover { background:#f8fafc }
+
+.progress-circle .circle { width: 88px; height: 88px; border-radius: 50%; background: #f3f4f6; display:flex; align-items:center; justify-content:center; font-weight:700 }
+
+.discussion-section { margin-top:1.25rem; background:#fff; padding:0.75rem; border-radius:8px }
+.discussion-input { display:flex; gap:0.5rem; margin-bottom:0.75rem }
+.discussion-input input { flex:1; padding:0.6rem; border-radius:8px; border:1px solid rgba(15,23,42,0.06) }
+
+/* Responsive */
+@media (max-width: 900px) {
+	.learning-content { flex-direction: column }
+	.video-player iframe { height: 360px }
+	.left-header h1 { font-size: 1.1rem }
+}
+
+@media (max-width: 480px) {
+	.video-player iframe { height: 220px }
+	.left-header h1 { font-size: 1rem }
+}
